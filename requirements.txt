@@ -5,7 +5,11 @@ langchain-text-splitters
 
 langchain_groq
 langchain_google_genai
+langchain_openai
 
 python-dotenv
+
+pypdf
+faiss-cpu
 
 # -e .
