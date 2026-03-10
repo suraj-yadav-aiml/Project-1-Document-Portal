@@ -13,3 +13,10 @@ dependencies = [
     "langchain-text-splitters>=1.1.1",
     "python-dotenv>=1.2.2",
 ]
+
+[dependency-groups]
+dev = [
+    "black>=26.3.0",
+    "ipykernel>=7.2.0",
+    "isort>=8.0.1",
+]
