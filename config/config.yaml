@@ -37,24 +37,24 @@ llm:
     provider: "groq"
     model_name: "deepseek-r1-distill-llama-70b"
     temperature: 0
-    max_output_tokens: 2048
+    max_tokens: 2048
 
   google:
     provider: "google"
     model_name: "gemini-2.0-flash"
     temperature: 0
-    max_output_tokens: 2048
+    max_tokens: 2048
 
   openai:
     provider: "openai"
     model_name: "gpt-4o"             
     temperature: 0                    
-    max_output_tokens: 2048
+    max_tokens: 2048
     context_window: 128000            
 
   anthropic:
     provider: "anthropic"
     model_name: "claude-sonnet-4-20250514"   
     temperature: 0
-    max_output_tokens: 2048
+    max_tokens: 2048
     context_window: 200000           
