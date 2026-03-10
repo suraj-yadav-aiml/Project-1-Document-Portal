@@ -15,6 +15,7 @@ dependencies = [
     "langchain-text-splitters>=1.1.1",
     "pypdf>=6.8.0",
     "python-dotenv>=1.2.2",
+    "structlog>=25.5.0",
 ]
 
 [dependency-groups]

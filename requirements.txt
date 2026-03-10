@@ -12,4 +12,6 @@ python-dotenv
 pypdf
 faiss-cpu
 
+structlog
+
 # -e .

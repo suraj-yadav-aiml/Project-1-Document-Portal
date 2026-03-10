@@ -7,3 +7,6 @@ github_link.txt
 *.egg
 .eggs/
 __pycache__/
+
+/logs
+*.pyc
