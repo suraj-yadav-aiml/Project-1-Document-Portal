@@ -1,0 +1,60 @@
+faiss_db:
+  collection_name: "document_protal"
+
+embedding_model:
+
+  google:
+    provider: "google"
+    model_name: "models/text-embedding-004"
+
+  openai:
+    provider: "openai"
+    model_name: "text-embedding-3-small"  
+
+  cohere:
+    provider: "cohere"
+    model_name: "embed-english-v3.0"
+
+  ollama:
+    provider: "ollama"
+    model_name: "nomic-embed-text"   # 768-dim, fast, general purpose
+    # model_name: "mxbai-embed-large" # 1024-dim, higher quality
+    dimensions: 768
+    base_url: "http://localhost:11434"
+
+  huggingface:
+    provider: "huggingface"
+    model_name: "BAAI/bge-m3"          
+    # model_name: "sentence-transformers/all-MiniLM-L6-v2"  # lightweight
+    dimensions: 1024
+    device: "cpu"                     
+
+retriever:
+  top_k: 10
+
+llm:
+  groq:
+    provider: "groq"
+    model_name: "deepseek-r1-distill-llama-70b"
+    temperature: 0
+    max_output_tokens: 2048
+
+  google:
+    provider: "google"
+    model_name: "gemini-2.0-flash"
+    temperature: 0
+    max_output_tokens: 2048
+
+  openai:
+    provider: "openai"
+    model_name: "gpt-4o"             
+    temperature: 0                    
+    max_output_tokens: 2048
+    context_window: 128000            
+
+  anthropic:
+    provider: "anthropic"
+    model_name: "claude-sonnet-4-20250514"   
+    temperature: 0
+    max_output_tokens: 2048
+    context_window: 200000           
