@@ -2,3 +2,8 @@
 /.venv
 github_link.txt
 .env
+
+*.egg-info/
+*.egg
+.eggs/
+__pycache__/
