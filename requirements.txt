@@ -13,5 +13,6 @@ pypdf
 faiss-cpu
 
 structlog
+omegaconf
 
 # -e .

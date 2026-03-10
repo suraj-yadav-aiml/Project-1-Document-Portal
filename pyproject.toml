@@ -13,6 +13,7 @@ dependencies = [
     "langchain-groq>=1.1.2",
     "langchain-openai>=1.1.11",
     "langchain-text-splitters>=1.1.1",
+    "omegaconf>=2.3.0",
     "pypdf>=6.8.0",
     "python-dotenv>=1.2.2",
     "structlog>=25.5.0",
