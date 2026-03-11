@@ -15,5 +15,6 @@ faiss-cpu
 
 structlog
 omegaconf
+pandas
 
 # -e .

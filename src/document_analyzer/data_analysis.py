@@ -9,7 +9,7 @@ from logger.custom_logger import CustomLogger
 from exception.custom_exception import DocumentPortalException
 from utils.model_loader import ModelLoader
 from prompt.prompt_library import PROMPT_REGISTRY
-from model.models import Metadata
+from model.models import Metadata, PromptType
 
 class DocumentAnalyzer:
     """Analyzes documents using LLMs and extracts structured metadata."""
@@ -23,11 +23,11 @@ class DocumentAnalyzer:
         """
         try:
             self.log = CustomLogger().get_logger(__name__)
-
-            if 'document_analysis' not in PROMPT_REGISTRY:
+            prompt_key = PromptType.DOCUMENT_ANALYSIS.value
+            if prompt_key not in PROMPT_REGISTRY:
                 raise KeyError('document_analysis')
             
-            self.prompt: ChatPromptTemplate = PROMPT_REGISTRY['document_analysis']
+            self.prompt: ChatPromptTemplate = PROMPT_REGISTRY[prompt_key]
             self.llm: BaseLanguageModel = ModelLoader().load_llm(llm_provider=llm_provider)
             self.parser: JsonOutputParser = JsonOutputParser(pydantic_object=Metadata)
             self.chain: Runnable = self.prompt | self.llm | self.parser

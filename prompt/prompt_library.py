@@ -1,5 +1,6 @@
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
+# Prompt for document analysis
 
 document_analysis_prompt = ChatPromptTemplate.from_template("""
 ## 1. PERSONA
@@ -29,7 +30,27 @@ Your response MUST be ONLY the valid JSON object. Do not include any introductor
 
 
 
+# Prompt for document comparison
+
+document_comparison_prompt = ChatPromptTemplate.from_template("""
+You will be provided with content from two PDFs. Your tasks are as follows:
+
+1. Compare the content in two PDFs
+2. Identify the difference in PDF and note down the page number 
+3. The output you provide must be page wise comparison content 
+4. If any page do not have any change, mention as 'NO CHANGE' 
+
+Input documents:
+
+{combined_docs}
+
+Your response should follow this format:
+
+{format_instruction}
+""") 
+
 
 PROMPT_REGISTRY = {
     "document_analysis": document_analysis_prompt,
+    "document_comparison": document_comparison_prompt,
 }
