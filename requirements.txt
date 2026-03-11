@@ -10,6 +10,7 @@ langchain_openai
 python-dotenv
 
 pypdf
+PyMuPDF
 faiss-cpu
 
 structlog
